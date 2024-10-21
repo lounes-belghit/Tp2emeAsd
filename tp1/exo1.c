@@ -4,7 +4,7 @@
 typedef struct {
     char nom[50];
     char prenom[50];
-    int matricule;
+    char matricule[10];
 } Etudiant;
 
 void saisirEtudiant(Etudiant *etudiant) {
@@ -13,11 +13,11 @@ void saisirEtudiant(Etudiant *etudiant) {
     printf("Prenom: ");
     scanf("%s", etudiant->prenom);
     printf("Matricule: ");
-    scanf("%d", &etudiant->matricule);
+    scanf("%s", etudiant->matricule);
 }
 
 void afficherEtudiant(Etudiant etudiant) {
-    printf("Nom: %s, Prenom: %s, Matricule: %d\n", etudiant.nom, etudiant.prenom, etudiant.matricule);
+    printf("Nom: %s, Prenom: %s, Matricule: %s\n", etudiant.nom, etudiant.prenom, etudiant.matricule);
 }
 
 int main() {
